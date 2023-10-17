@@ -6,12 +6,12 @@ import {
   update as updateIntercom,
 } from "./intercom";
 
-export const IntercomProvider = ({ children }) => {
+export const IntercomProvider = ({ children, bootParams }) => {
   const router = useRouter();
 
   if (typeof window !== "undefined") {
     loadIntercom();
-    bootIntercom();
+    bootIntercom(bootParams);
   }
 
   useEffect(() => {
