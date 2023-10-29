@@ -1,19 +1,47 @@
-# Intercom example
+# Next.js App with Intercom Integration
 
-This example shows how to integrate [Intercom](https://www.intercom.com/) into a Next.js app.
 
-## Deploy your own
+## Table of Contents
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-intercom):
+- [Description](#description)
+- [Features](#features)
+- [Installation](#installation)
+- [Configuration](#configuration)
+- [Usage](#usage)
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/active-class-name&project-name=active-class-name&repository-name=with-intercom&env=INTERCOM_APP_ID)
+## Description
 
-## How to use
+This repository contains a Next.js application that seamlessly integrates Intercom, a customer messaging platform, to enhance user engagement and support capabilities.
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
+## Features
+
+- **Intercom Integration**: Connect with your users in real-time, collect valuable user data, and provide personalized support.
+- **Next.js Framework**: Leverage the power of React and the simplicity of Next.js for building a performant and scalable web application.
+
+## Installation
+
+To run this application locally, follow these steps:
 
 ```bash
-npx create-next-app --example with-intercom with-intercom-app
-# or
-yarn create next-app --example with-intercom with-intercom-app
+git clone https://github.com/Munazar-99/Nextjs-intercom-typescript.git
+cd Nextjs-intercom-typescript
+npm install
+```
+
+## Configuration
+
+Before running the application, you need to set up your Intercom credentials. Follow these steps:
+
+1. Obtain your Intercom App ID and API Key from the [Intercom Developer Dashboard](https://developers.intercom.com/building-apps/docs/authentication#section-authenticating-requests).
+2. Create a `.env` file in the project root and add the following:
+
+```env
+INTERCOM_APP_ID=your-intercom-app-id
+```
+## Usage
+
+Once the installation and configuration are complete, you can start the Next.js development server:
+
+```bash
+npm run dev
 ```

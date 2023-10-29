@@ -1,21 +1,31 @@
-import { useEffect } from "react";
 import { useRouter } from "next/router";
+import type { ReactNode } from "react";
+import { useEffect } from "react";
+
 import {
-  load as loadIntercom,
   boot as bootIntercom,
+  load as loadIntercom,
   update as updateIntercom,
 } from "./intercom";
 
-export const IntercomProvider = ({ children, bootParams }) => {
+export interface IntercomProviderProps {
+  bootParams: Intercom_.IntercomSettings;
+  children: ReactNode;
+}
+
+export const IntercomProvider = ({
+  bootParams,
+  children,
+}: IntercomProviderProps) => {
   const router = useRouter();
 
   if (typeof window !== "undefined") {
-    loadIntercom();
     bootIntercom(bootParams);
+    loadIntercom();
   }
 
   useEffect(() => {
-    const handleRouteChange = (url) => {
+    const handleRouteChange = () => {
       if (typeof window !== "undefined") {
         updateIntercom();
       }
